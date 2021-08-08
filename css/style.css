@@ -1,4 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(208, 10%, 74%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --blue-green: hsl(179, 47%, 52%);
+    --bg-gray: #e6eff6;
+}
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-gray);
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+button{
+    text-decoration: none;
+    border: none;
+    background: var(--bright-yellow);
+    border-radius: 5px;
+    padding: 15px 50px;
+    width: 240px;
+    color: white;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+h1{
+    color: var(--cyan);
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    width: 600px;
+    height: 450px;
+}
+
+.container-grid-1 {
+    grid-area: 1 / 1 / 2 / 3;
+
+    background:white;
+    padding: 20px;
+    border-radius: 7px 7px 0 0;
+}
+.container-grid-1 h2{
+    color: var(--bright-yellow);
+    font-size: 16px;
+}
+.container-grid-1 p{
+    color: var(--light-gray);
+}
+
+.container-grid-2 {
+    grid-area: 2 / 1 / 3 / 2;
+
+    background: var(--cyan);
+    padding: 20px;
+    border-radius: 0 0 0 7px;
+    color: white;
+}
+.container-grid-2 h2{
+    font-size: 16px;
+}
+.container-grid-2 b{
+    font-size: 2rem;
+}
+.container-grid-2 span{
+    color: var(--bg-gray);
+    margin: 0 0 0 10px;
+}
+.container-grid-2 p{
+    font-weight: 400;
+}
+
+.container-grid-3 {
+    grid-area: 2 / 2 / 3 / 3;
+
+    background: var(--blue-green);
+    padding: 20px;
+    border-radius: 0 0 7px 0;
+    color: white;
+}
+.container-grid-3 p{
+    color: var(--bg-gray);
+    margin: 3px auto;
+    font-size: 14px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: left;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
